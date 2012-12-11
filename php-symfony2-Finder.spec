@@ -18,7 +18,7 @@ BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
 Requires:	php(core) >= %{php_min_version}
 Requires:	php-channel(pear.symfony.com)
-Requires:	php-pear
+Requires:	php-pear >= 1.3.10
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,9 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGELOG.md LICENSE README.md install.log
 %{php_pear_dir}/.registry/.channel.*/*.reg
-# XXX proper dirs
-%dir %{php_pear_dir}/Symfony
-%dir %{php_pear_dir}/Symfony/Component
 %dir %{php_pear_dir}/Symfony/Component/Finder
 %{php_pear_dir}/Symfony/Component/Finder/*.php
 %{php_pear_dir}/Symfony/Component/Finder/Comparator
