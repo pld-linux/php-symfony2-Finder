@@ -5,7 +5,7 @@
 Summary:	%{pearname} - Symfony2 Finder Component
 Name:		php-symfony2-Finder
 Version:	2.1.2
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
@@ -30,9 +30,9 @@ In PEAR status of this package is: %{status}.
 
 # no packaging of tests
 rm -r .%{php_pear_dir}/Symfony/Component/Finder/Tests
+rm .%{php_pear_dir}/Symfony/Component/Finder/phpunit.xml.dist
 
 # fixups
-mv .%{php_pear_dir}/Symfony/Component/Finder/phpunit.xml{.dist,}
 mv .%{php_pear_dir}/Symfony/Component/Finder/CHANGELOG.md .
 mv docs/Finder/Symfony/Component/Finder/* .
 
@@ -52,7 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{php_pear_dir}/Symfony
 %dir %{php_pear_dir}/Symfony/Component
 %dir %{php_pear_dir}/Symfony/Component/Finder
-%{php_pear_dir}/Symfony/Component/Finder/phpunit.xml
 %{php_pear_dir}/Symfony/Component/Finder/*.php
 %{php_pear_dir}/Symfony/Component/Finder/Comparator
 %{php_pear_dir}/Symfony/Component/Finder/Iterator
