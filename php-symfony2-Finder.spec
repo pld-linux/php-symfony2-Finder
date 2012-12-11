@@ -6,7 +6,7 @@
 Summary:	%{pearname} - Symfony2 Finder Component
 Name:		php-symfony2-Finder
 Version:	2.1.4
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
