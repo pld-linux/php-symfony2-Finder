@@ -5,12 +5,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Symfony2 Finder Component
 Name:		php-symfony2-Finder
-Version:	2.1.4
-Release:	2
+Version:	2.1.6
+Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	c977b97dc4e7b9c6e81374618a6329bf
+# Source0-md5:	0207418a1f86fe8f10b31aaef20e0317
 URL:		http://pear.symfony.com/package/Finder/
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
@@ -33,6 +33,7 @@ In PEAR status of this package is: %{status}.
 # no packaging of tests
 rm -r .%{php_pear_dir}/Symfony/Component/%{pearname}/Tests
 rm .%{php_pear_dir}/Symfony/Component/%{pearname}/phpunit.xml.dist
+rm .%{php_pear_dir}/Symfony/Component/Finder/.gitattributes
 
 # fixups
 mv .%{php_pear_dir}/Symfony/Component/%{pearname}/CHANGELOG.md .
