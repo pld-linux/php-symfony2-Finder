@@ -1,11 +1,10 @@
 # $Revision: 1.31 $, $Date: 2011/04/10 20:45:35 $
-%define		status		stable
 %define		pearname	Finder
 %define		php_min_version 5.3.3
 %include	/usr/lib/rpm/macros.php
-Summary:	%{pearname} - Symfony2 Finder Component
+Summary:	Symfony2 Finder Component
 Name:		php-symfony2-Finder
-Version:	2.1.6
+Version:	2.3.4
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
@@ -23,20 +22,17 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Symfony2 Finder Component
-
-In PEAR status of this package is: %{status}.
+The Finder Component finds files and directories via an intuitive
+fluent interface.
 
 %prep
 %pear_package_setup
 
 # no packaging of tests
-rm -r .%{php_pear_dir}/Symfony/Component/%{pearname}/Tests
-rm .%{php_pear_dir}/Symfony/Component/%{pearname}/phpunit.xml.dist
-rm .%{php_pear_dir}/Symfony/Component/Finder/.gitattributes
+mv .%{php_pear_dir}/Symfony/Component/%{pearname}/Tests .
+mv .%{php_pear_dir}/Symfony/Component/%{pearname}/phpunit.xml.dist .
 
 # fixups
-mv .%{php_pear_dir}/Symfony/Component/%{pearname}/CHANGELOG.md .
 mv docs/%{pearname}/Symfony/Component/%{pearname}/* .
 
 %install
@@ -53,5 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/.registry/.channel.*/*.reg
 %dir %{php_pear_dir}/Symfony/Component/Finder
 %{php_pear_dir}/Symfony/Component/Finder/*.php
+%{php_pear_dir}/Symfony/Component/Finder/Adapter
 %{php_pear_dir}/Symfony/Component/Finder/Comparator
+%{php_pear_dir}/Symfony/Component/Finder/Exception
+%{php_pear_dir}/Symfony/Component/Finder/Expression
 %{php_pear_dir}/Symfony/Component/Finder/Iterator
+%{php_pear_dir}/Symfony/Component/Finder/Shell
