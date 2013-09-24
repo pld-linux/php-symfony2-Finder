@@ -9,7 +9,7 @@ Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	0207418a1f86fe8f10b31aaef20e0317
+# Source0-md5:	41272b533d353d16c0f8ac931e84b89d
 URL:		http://pear.symfony.com/package/Finder/
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
