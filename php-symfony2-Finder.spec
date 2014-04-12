@@ -1,21 +1,23 @@
-# $Revision: 1.31 $, $Date: 2011/04/10 20:45:35 $
 %define		pearname	Finder
 %define		php_min_version 5.3.3
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Finder Component
 Name:		php-symfony2-Finder
-Version:	2.3.4
+Version:	2.4.3
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	41272b533d353d16c0f8ac931e84b89d
-URL:		http://pear.symfony.com/package/Finder/
+# Source0-md5:	ad46fd6331f6c8606b4f2bdd9ce49539
+URL:		http://symfony.com/doc/2.4/components/finder.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
 Requires:	php(core) >= %{php_min_version}
+Requires:	php(date)
+Requires:	php(pcre)
+Requires:	php(spl)
 Requires:	php-channel(pear.symfony.com)
 Requires:	php-pear >= 1.3.10
 BuildArch:	noarch
