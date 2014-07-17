@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Finder Component
 Name:		php-symfony2-Finder
-Version:	2.4.3
+Version:	2.4.4
 Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	http://pear.symfony.com/get/%{pearname}-%{version}.tgz
-# Source0-md5:	ad46fd6331f6c8606b4f2bdd9ce49539
+# Source0-md5:	6aaba5fd2e9b822e3c2ae14d0e8d0828
 URL:		http://symfony.com/doc/2.4/components/finder.html
 BuildRequires:	php-channel(pear.symfony.com)
 BuildRequires:	php-pear-PEAR
