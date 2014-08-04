@@ -28,7 +28,6 @@ fluent interface.
 %prep
 %setup -q -n %{pearname}-%{version}
 
-
 %build
 phpab -n -e '*/Tests/*' -o autoload.php .
 
