@@ -4,7 +4,7 @@
 Summary:	Symfony2 Finder Component
 Name:		php-symfony2-Finder
 Version:	2.4.8
-Release:	1
+Release:	2
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{pearname}/archive/v%{version}/%{pearname}-%{version}.tar.gz
@@ -29,7 +29,7 @@ fluent interface.
 %setup -q -n %{pearname}-%{version}
 
 %build
-phpab -n -e '*/Tests/*' -o autoload.php .
+phpab -n -e '*/Tests/*' -o autoloader.php .
 
 %install
 rm -rf $RPM_BUILD_ROOT
