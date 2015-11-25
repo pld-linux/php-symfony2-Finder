@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Finder Component
 Name:		php-symfony2-Finder
-Version:	2.7.5
+Version:	2.7.7
 Release:	3
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	df78d314f2dea80d158db328eb34c643
+# Source0-md5:	d154aaf26015fc091bc56b8902f9f794
 URL:		http://symfony.com/doc/2.7/components/finder.html
 BuildRequires:	phpab
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -29,7 +29,7 @@ fluent interface.
 %setup -q -n finder-%{version}
 
 %build
-phpab -n -e '*/Tests/*' -o autoloader.php .
+phpab -n -e '*/Tests/*' -o autoload.php .
 
 %install
 rm -rf $RPM_BUILD_ROOT
