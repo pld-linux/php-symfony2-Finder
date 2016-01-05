@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Finder Component
 Name:		php-symfony2-Finder
-Version:	2.7.7
-Release:	3
+Version:	2.7.8
+Release:	1
 License:	MIT
 Group:		Development/Languages/PHP
 Source0:	https://github.com/symfony/%{package}/archive/v%{version}/%{package}-%{version}.tar.gz
-# Source0-md5:	d154aaf26015fc091bc56b8902f9f794
+# Source0-md5:	8a2ae4777527f38810fe31beb40095d9
 URL:		http://symfony.com/doc/2.7/components/finder.html
 BuildRequires:	phpab
 BuildRequires:	rpmbuild(macros) >= 1.610
