@@ -1,6 +1,5 @@
 %define		package	Finder
 %define		php_min_version 5.3.9
-%include	/usr/lib/rpm/macros.php
 Summary:	Symfony2 Finder Component
 Name:		php-symfony2-Finder
 Version:	2.7.8
